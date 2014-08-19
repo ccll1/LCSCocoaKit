@@ -1,18 +1,18 @@
 //
-//  LCSCocoaKitTests.m
-//  LCSCocoaKitTests
+//  NSLayoutConstraint+LCSCocoaKit_Tests.m
+//  LCSCocoaKit
 //
-//  Created by Christoph Lauterbach on 12.08.14.
+//  Created by Christoph Lauterbach on 16.08.14.
 //  Copyright (c) 2014 Christoph Lauterbach. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface LCSCocoaKitTests : XCTestCase
+@interface NSLayoutConstraint_LCSCocoaKit_Tests : XCTestCase
 
 @end
 
-@implementation LCSCocoaKitTests
+@implementation NSLayoutConstraint_LCSCocoaKit_Tests
 
 - (void)setUp
 {
