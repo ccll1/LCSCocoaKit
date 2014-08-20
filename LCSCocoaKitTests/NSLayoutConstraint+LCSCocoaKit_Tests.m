@@ -8,27 +8,125 @@
 
 #import <XCTest/XCTest.h>
 
+#import "NSLayoutConstraint+LCSCocoaKit.h"
+
 @interface NSLayoutConstraint_LCSCocoaKit_Tests : XCTestCase
 
 @end
 
 @implementation NSLayoutConstraint_LCSCocoaKit_Tests
 
-- (void)setUp
+- (void)testIsEqual
 {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    NSView *viewA = [NSView new];
+    NSView *viewB = [NSView new];
+
+    NSLayoutConstraint *constraintA;
+    NSLayoutConstraint *constraintB;
+    
+    constraintA = [NSLayoutConstraint constraintWithItem:viewA
+                                               attribute:NSLayoutAttributeWidth
+                                               relatedBy:NSLayoutRelationEqual
+                                                  toItem:viewB
+                                               attribute:NSLayoutAttributeWidth
+                                              multiplier:1.0
+                                                constant:200.0];
+    constraintB = [NSLayoutConstraint constraintWithItem:viewA
+                                               attribute:NSLayoutAttributeWidth
+                                               relatedBy:NSLayoutRelationEqual
+                                                  toItem:viewB
+                                               attribute:NSLayoutAttributeWidth
+                                              multiplier:1.0
+                                                constant:200.0];
+    
+    XCTAssertEqualObjects(constraintA, constraintB);
+    
+    constraintA = [NSLayoutConstraint constraintWithItem:viewA
+                                               attribute:NSLayoutAttributeWidth
+                                               relatedBy:NSLayoutRelationEqual
+                                                  toItem:nil
+                                               attribute:NSLayoutAttributeNotAnAttribute
+                                              multiplier:1.0
+                                                constant:200.0];
+    constraintB = [NSLayoutConstraint constraintWithItem:viewA
+                                               attribute:NSLayoutAttributeWidth
+                                               relatedBy:NSLayoutRelationEqual
+                                                  toItem:nil
+                                               attribute:NSLayoutAttributeNotAnAttribute
+                                              multiplier:1.0
+                                                constant:200.0];
+    
+    XCTAssertEqualObjects(constraintA, constraintB);
+    
+    constraintA = [NSLayoutConstraint constraintWithItem:viewA
+                                               attribute:NSLayoutAttributeWidth
+                                               relatedBy:NSLayoutRelationEqual
+                                                  toItem:nil
+                                               attribute:NSLayoutAttributeNotAnAttribute
+                                              multiplier:1.0
+                                                constant:20000000000.0];
+    constraintB = [NSLayoutConstraint constraintWithItem:viewA
+                                               attribute:NSLayoutAttributeWidth
+                                               relatedBy:NSLayoutRelationEqual
+                                                  toItem:nil
+                                               attribute:NSLayoutAttributeNotAnAttribute
+                                              multiplier:1.0
+                                                constant:200.0];
+    
+    XCTAssertNotEqualObjects(constraintA, constraintB);
 }
 
-- (void)tearDown
+- (void)testSimpleInitializers
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSView *viewA = [NSView new];
+    NSView *viewB = [NSView new];
+    
+    NSLayoutConstraint *constraintSimple;
+    NSLayoutConstraint *constraintOriginal;
+    
+    constraintSimple = [NSLayoutConstraint constraintWithSingleItem:viewA
+                                                          attribute:NSLayoutAttributeWidth
+                                                           constant:200.0];
+    constraintOriginal = [NSLayoutConstraint constraintWithItem:viewA
+                                                      attribute:NSLayoutAttributeWidth
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:nil
+                                                      attribute:NSLayoutAttributeNotAnAttribute
+                                                     multiplier:1.0
+                                                       constant:200.0];
+    
+    XCTAssertEqualObjects(constraintSimple, constraintOriginal);
+    
+    constraintSimple = [NSLayoutConstraint constraintWithItem:viewA
+                                                    attribute:NSLayoutAttributeLeading
+                                                  equalToItem:viewB
+                                                    attribute:NSLayoutAttributeLeading
+                                                     constant:100.0];
+    constraintOriginal = [NSLayoutConstraint constraintWithItem:viewA
+                                                      attribute:NSLayoutAttributeLeading
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:viewB
+                                                      attribute:NSLayoutAttributeLeading
+                                                     multiplier:1.0
+                                                       constant:100.0];
+    
+    XCTAssertEqualObjects(constraintSimple, constraintOriginal);
+    
+    constraintSimple = [NSLayoutConstraint constraintWithItem:viewA
+                                                    attribute:NSLayoutAttributeTrailing
+                                                  equalToItem:viewB
+                                                    attribute:NSLayoutAttributeTrailing
+                                                   multiplier:1.0
+                                                     constant:100.0];
+    constraintOriginal = [NSLayoutConstraint constraintWithItem:viewA
+                                                      attribute:NSLayoutAttributeTrailing
+                                                      relatedBy:NSLayoutRelationEqual
+                                                         toItem:viewB
+                                                      attribute:NSLayoutAttributeTrailing
+                                                     multiplier:1.0
+                                                       constant:100.0];
+    
+    XCTAssertEqualObjects(constraintSimple, constraintOriginal);
 }
 
 @end

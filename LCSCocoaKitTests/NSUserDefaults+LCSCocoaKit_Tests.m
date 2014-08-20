@@ -8,27 +8,30 @@
 
 #import <XCTest/XCTest.h>
 
+#import "NSUserDefaults+LCSCocoaKit.h"
+
 @interface NSUserDefaults_LCSCocoaKit_Tests : XCTestCase
 
 @end
 
 @implementation NSUserDefaults_LCSCocoaKit_Tests
 
-- (void)setUp
+- (void)testColor
 {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSColor *color;
+    NSColor *fetchedColor;
+    
+    color = [NSColor redColor];
+    
+    [[NSUserDefaults standardUserDefaults] setColor:color forKey:@"color"];
+    fetchedColor = [[NSUserDefaults standardUserDefaults] colorForKey:@"color"];
+    
+    XCTAssertEqualObjects(color, fetchedColor);
+    
+    [[NSUserDefaults standardUserDefaults] setColor:nil forKey:@"color"];
+    fetchedColor = [[NSUserDefaults standardUserDefaults] colorForKey:@"color"];
+    
+    XCTAssertEqualObjects(nil, fetchedColor);
 }
 
 @end

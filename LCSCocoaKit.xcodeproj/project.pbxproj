@@ -7,51 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		590B89AF199A49D000D57635 /* NSBezierPath+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 590B89AE199A49D000D57635 /* NSBezierPath+LCSCocoaKit_Tests.m */; };
-		590B89B9199AAEAF00D57635 /* LCSFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590B89B6199AAE8100D57635 /* LCSFoundationKit.framework */; };
 		592FE361199A151E00EE6E64 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592FE360199A151E00EE6E64 /* Cocoa.framework */; };
-		592FE36F199A151E00EE6E64 /* LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE36E199A151E00EE6E64 /* LCSCocoaKit.m */; };
 		592FE376199A151E00EE6E64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592FE375199A151E00EE6E64 /* XCTest.framework */; };
 		592FE377199A151E00EE6E64 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592FE360199A151E00EE6E64 /* Cocoa.framework */; };
 		592FE37A199A151E00EE6E64 /* LCSCocoaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592FE35D199A151E00EE6E64 /* LCSCocoaKit.framework */; };
 		592FE380199A151E00EE6E64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 592FE37E199A151E00EE6E64 /* InfoPlist.strings */; };
 		592FE382199A151E00EE6E64 /* NSColor+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE381199A151E00EE6E64 /* NSColor+LCSCocoaKit_Tests.m */; };
-		592FE393199A166100EE6E64 /* NSColor+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE38F199A166100EE6E64 /* NSColor+LCSCocoaKit.h */; };
+		592FE393199A166100EE6E64 /* NSColor+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE38F199A166100EE6E64 /* NSColor+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		592FE394199A166100EE6E64 /* NSColor+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE390199A166100EE6E64 /* NSColor+LCSCocoaKit.m */; };
-		592FE395199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE391199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.h */; };
+		592FE395199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE391199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		592FE396199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE392199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.m */; };
-		592FE399199A167100EE6E64 /* CIColor+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE397199A167100EE6E64 /* CIColor+LCSCocoaKit.h */; };
+		592FE399199A167100EE6E64 /* CIColor+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE397199A167100EE6E64 /* CIColor+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		592FE39A199A167100EE6E64 /* CIColor+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE398199A167100EE6E64 /* CIColor+LCSCocoaKit.m */; };
-		592FE39F199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE39B199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.h */; };
+		592FE39F199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE39B199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		592FE3A0199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE39C199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.m */; };
-		592FE3A1199A16CB00EE6E64 /* NSView+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE39D199A16CB00EE6E64 /* NSView+LCSCocoaKit.h */; };
+		592FE3A1199A16CB00EE6E64 /* NSView+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE39D199A16CB00EE6E64 /* NSView+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		592FE3A2199A16CB00EE6E64 /* NSView+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE39E199A16CB00EE6E64 /* NSView+LCSCocoaKit.m */; };
+		59A6660B19A37989007DC1DA /* LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE36D199A151E00EE6E64 /* LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59C4F4A5199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4A4199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m */; };
+		59C4F4A8199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4A7199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m */; };
+		59C4F4AA199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4A9199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m */; };
+		59C4F4AC199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4AB199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m */; };
 		59F2B8A6199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F2B8A4199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m */; };
-		59F2B8A7199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F2B8A5199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h */; };
+		59F2B8A7199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F2B8A5199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		590B89B5199AAE8100D57635 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 590B89B0199AAE8100D57635 /* LCSFoundationKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5966410C1998CF830064E4DF;
-			remoteInfo = LCSFoundationKit;
-		};
-		590B89B7199AAE8100D57635 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 590B89B0199AAE8100D57635 /* LCSFoundationKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 596641231998CF830064E4DF;
-			remoteInfo = LCSFoundationKitTests;
-		};
-		590B89BA199AB0D400D57635 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 590B89B0199AAE8100D57635 /* LCSFoundationKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5966410B1998CF830064E4DF;
-			remoteInfo = LCSFoundationKit;
-		};
 		592FE378199A151E00EE6E64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 592FE354199A151E00EE6E64 /* Project object */;
@@ -62,15 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		590B89AE199A49D000D57635 /* NSBezierPath+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
-		590B89B0199AAE8100D57635 /* LCSFoundationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LCSFoundationKit.xcodeproj; path = ../LCSFoundationKit/LCSFoundationKit.xcodeproj; sourceTree = "<group>"; };
 		592FE35D199A151E00EE6E64 /* LCSCocoaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LCSCocoaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		592FE360199A151E00EE6E64 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		592FE363199A151E00EE6E64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		592FE364199A151E00EE6E64 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		592FE365199A151E00EE6E64 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		592FE36D199A151E00EE6E64 /* LCSCocoaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSCocoaKit.h; sourceTree = "<group>"; };
-		592FE36E199A151E00EE6E64 /* LCSCocoaKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCSCocoaKit.m; sourceTree = "<group>"; };
 		592FE374199A151E00EE6E64 /* LCSCocoaKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCSCocoaKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		592FE375199A151E00EE6E64 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		592FE37D199A151E00EE6E64 /* LCSCocoaKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LCSCocoaKitTests-Info.plist"; sourceTree = "<group>"; };
@@ -86,6 +64,10 @@
 		592FE39C199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LCSCocoaKit.m"; sourceTree = "<group>"; };
 		592FE39D199A16CB00EE6E64 /* NSView+LCSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+LCSCocoaKit.h"; sourceTree = "<group>"; };
 		592FE39E199A16CB00EE6E64 /* NSView+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+LCSCocoaKit.m"; sourceTree = "<group>"; };
+		59C4F4A4199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
+		59C4F4A7199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
+		59C4F4A9199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
+		59C4F4AB199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
 		59F2B8A4199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LCSCocoaKit.m"; sourceTree = "<group>"; };
 		59F2B8A5199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+LCSCocoaKit.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,7 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				592FE361199A151E00EE6E64 /* Cocoa.framework in Frameworks */,
-				590B89B9199AAEAF00D57635 /* LCSFoundationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,15 +94,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		590B89B1199AAE8100D57635 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				590B89B6199AAE8100D57635 /* LCSFoundationKit.framework */,
-				590B89B8199AAE8100D57635 /* LCSFoundationKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		592FE353199A151E00EE6E64 = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +116,6 @@
 		592FE35F199A151E00EE6E64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				590B89B0199AAE8100D57635 /* LCSFoundationKit.xcodeproj */,
 				592FE360199A151E00EE6E64 /* Cocoa.framework */,
 				592FE375199A151E00EE6E64 /* XCTest.framework */,
 				592FE362199A151E00EE6E64 /* Other Frameworks */,
@@ -166,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				592FE36D199A151E00EE6E64 /* LCSCocoaKit.h */,
-				592FE36E199A151E00EE6E64 /* LCSCocoaKit.m */,
 				592FE38F199A166100EE6E64 /* NSColor+LCSCocoaKit.h */,
 				592FE390199A166100EE6E64 /* NSColor+LCSCocoaKit.m */,
 				592FE391199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.h */,
@@ -187,7 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				592FE381199A151E00EE6E64 /* NSColor+LCSCocoaKit_Tests.m */,
-				590B89AE199A49D000D57635 /* NSBezierPath+LCSCocoaKit_Tests.m */,
+				59C4F4A4199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m */,
+				59C4F4A7199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m */,
+				59C4F4A9199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m */,
+				59C4F4AB199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m */,
 				592FE37C199A151E00EE6E64 /* Supporting Files */,
 			);
 			path = LCSCocoaKitTests;
@@ -209,6 +182,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A6660B19A37989007DC1DA /* LCSCocoaKit.h in Headers */,
 				592FE395199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.h in Headers */,
 				59F2B8A7199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h in Headers */,
 				592FE399199A167100EE6E64 /* CIColor+LCSCocoaKit.h in Headers */,
@@ -233,7 +207,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				590B89BB199AB0D400D57635 /* PBXTargetDependency */,
 			);
 			name = LCSCocoaKit;
 			productName = LCSCocoaKit;
@@ -282,12 +255,6 @@
 			mainGroup = 592FE353199A151E00EE6E64;
 			productRefGroup = 592FE35E199A151E00EE6E64 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 590B89B1199AAE8100D57635 /* Products */;
-					ProjectRef = 590B89B0199AAE8100D57635 /* LCSFoundationKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				592FE35C199A151E00EE6E64 /* LCSCocoaKit */,
@@ -295,23 +262,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		590B89B6199AAE8100D57635 /* LCSFoundationKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LCSFoundationKit.framework;
-			remoteRef = 590B89B5199AAE8100D57635 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		590B89B8199AAE8100D57635 /* LCSFoundationKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = LCSFoundationKitTests.xctest;
-			remoteRef = 590B89B7199AAE8100D57635 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		592FE35B199A151E00EE6E64 /* Resources */ = {
@@ -341,7 +291,6 @@
 				592FE396199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.m in Sources */,
 				59F2B8A6199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m in Sources */,
 				592FE394199A166100EE6E64 /* NSColor+LCSCocoaKit.m in Sources */,
-				592FE36F199A151E00EE6E64 /* LCSCocoaKit.m in Sources */,
 				592FE3A2199A16CB00EE6E64 /* NSView+LCSCocoaKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,19 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				590B89AF199A49D000D57635 /* NSBezierPath+LCSCocoaKit_Tests.m in Sources */,
+				59C4F4A5199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m in Sources */,
+				59C4F4AA199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m in Sources */,
 				592FE382199A151E00EE6E64 /* NSColor+LCSCocoaKit_Tests.m in Sources */,
+				59C4F4AC199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m in Sources */,
+				59C4F4A8199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		590B89BB199AB0D400D57635 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LCSFoundationKit;
-			targetProxy = 590B89BA199AB0D400D57635 /* PBXContainerItemProxy */;
-		};
 		592FE379199A151E00EE6E64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 592FE35C199A151E00EE6E64 /* LCSCocoaKit */;

@@ -19,14 +19,14 @@
 
 - (void)testThrowOnNil
 {
-    XCTAssertThrows([NSColor deviceColorFromHexadecimalValue:nil]);
+    XCTAssertThrows([NSColor SRGBColorFromHexadecimalValue:nil]);
 }
 
 - (void)testThrowOnNonConformingValue
 {
     NSArray *wrongHexStrings = @[@"", @"---", @"#", @"#ZZZZZZ"];
     for (NSString *wrongHexString in wrongHexStrings) {
-        XCTAssertThrows([NSColor deviceColorFromHexadecimalValue:wrongHexString], @"%@", wrongHexString);
+        XCTAssertThrows([NSColor SRGBColorFromHexadecimalValue:wrongHexString], @"%@", wrongHexString);
     }
 }
 
@@ -37,9 +37,9 @@
         CGFloat green = (CGFloat)arc4random_uniform(255) / 255.0;
         CGFloat blue = (CGFloat)arc4random_uniform(255) / 255.0;
         
-        NSColor *color = [NSColor colorWithDeviceRed:red green:green blue:blue alpha:1.0];
-        NSString *hexString = color.deviceColorHexadecimalValue;
-        NSColor *convertedColor = [NSColor deviceColorFromHexadecimalValue:hexString];
+        NSColor *color = [NSColor colorWithSRGBRed:red green:green blue:blue alpha:1.0];
+        NSString *hexString = color.hexadecimalValue;
+        NSColor *convertedColor = [NSColor SRGBColorFromHexadecimalValue:hexString];
         XCTAssertEqualObjects(color, convertedColor);
     }
 }
@@ -52,8 +52,8 @@
         CGFloat brightness = (CGFloat)arc4random_uniform(100.0) / 100.0;
         
         NSColor *color = [NSColor colorWithDeviceHue:hue saturation:saturation brightness:brightness alpha:1.0];
-        NSString *hexString = color.deviceColorHexadecimalValue;
-        NSColor *convertedColor = [NSColor deviceColorFromHexadecimalValue:hexString];
+        NSString *hexString = color.hexadecimalValue;
+        NSColor *convertedColor = [NSColor SRGBColorFromHexadecimalValue:hexString];
         
         XCTAssertTrue([self isColor:color equalToColor:convertedColor withComponentTolerance:0.004]);
     }
@@ -79,80 +79,77 @@
 
 - (void)test3digitHexColor
 {
-    NSString *hexValue;
-    NSColor *color;
-    NSColor *supposedColor;
+    NSDictionary *hexToColors = @{@"#f00": [NSColor colorWithSRGBRed:1.0 green:0.0 blue:0.0 alpha:1.0],
+                                  @"#0f0": [NSColor colorWithSRGBRed:0.0 green:1.0 blue:0.0 alpha:1.0],
+                                  @"#00f": [NSColor colorWithSRGBRed:0.0 green:0.0 blue:1.0 alpha:1.0]};
     
-    hexValue = @"#f00";
-    supposedColor = [NSColor colorWithDeviceRed:1.0 green:0.0 blue:0.0 alpha:1.0];
-    color = [NSColor deviceColorFromHexadecimalValue:hexValue];
-    
-    XCTAssertEqualObjects(color, supposedColor);
-    
-    hexValue = @"#0f0";
-    supposedColor = [NSColor colorWithDeviceRed:0.0 green:1.0 blue:0.0 alpha:1.0];
-    color = [NSColor deviceColorFromHexadecimalValue:hexValue];
-    
-    XCTAssertEqualObjects(color, supposedColor);
-    
-    hexValue = @"#00f";
-    supposedColor = [NSColor colorWithDeviceRed:0.0 green:0.0 blue:1.0 alpha:1.0];
-    color = [NSColor deviceColorFromHexadecimalValue:hexValue];
-    
-    XCTAssertEqualObjects(color, supposedColor);
-}
-
-- (void)testCss8ByteColor
-{
-    NSDictionary *stringsToColors = @{@"rgb(255,0,0)": [NSColor colorWithDeviceRed:1.0 green:0.0 blue:0.0 alpha:1.0],
-                                      @"rgb(0,255,0)": [NSColor colorWithDeviceRed:0.0 green:1.0 blue:0.0 alpha:1.0],
-                                      @"rgb(0,0,255)": [NSColor colorWithDeviceRed:0.0 green:0.0 blue:1.0 alpha:1.0],
-                                      @"rgb(255,255,0)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:0.0 alpha:1.0],
-                                      @"rgb(255,255,255)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:1.0 alpha:1.0],
-                                      @"rgba(0,255,0,0)": [NSColor colorWithDeviceRed:0.0 green:1.0 blue:0.0 alpha:0.0],
-                                      @"rgba(0,0,255,0)": [NSColor colorWithDeviceRed:0.0 green:0.0 blue:1.0 alpha:0.0],
-                                      @"rgba(255,255,0,0)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:0.0 alpha:0.0],
-                                      @"rgba(255,255,255,0)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:1.0 alpha:0.0],
-                                      @"rgba(0,255,0,255)": [NSColor colorWithDeviceRed:0.0 green:1.0 blue:0.0 alpha:1.0],
-                                      @"rgba(0,0,255,255)": [NSColor colorWithDeviceRed:0.0 green:0.0 blue:1.0 alpha:1.0],
-                                      @"rgba(255,255,0,255)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:0.0 alpha:1.0],
-                                      @"rgba(255,255,255,255)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:1.0 alpha:1.0]
-                                      };
-    
-    for (NSString *cssValue in stringsToColors) {
-        NSColor *supposedColor = stringsToColors[cssValue];
-        NSColor *color = [NSColor deviceColorFromCSSValue:cssValue];
+    for (NSString *hexColor in hexToColors) {
+        NSColor *supposedColor = hexToColors[hexColor];
+        NSColor *color = [NSColor SRGBColorFromHexadecimalValue:hexColor];
         
         XCTAssertEqualObjects(color, supposedColor);
     }
 }
 
-- (void)testCssPercentColor
+- (void)testCssRGBColor
 {
-    NSDictionary *stringsToColors = @{@"rgb(100%,0%,0%)": [NSColor colorWithDeviceRed:1.0 green:0.0 blue:0.0 alpha:1.0],
-                                      @"rgb(0%,100%,0%)": [NSColor colorWithDeviceRed:0.0 green:1.0 blue:0.0 alpha:1.0],
-                                      @"rgb(0%,0%,100%)": [NSColor colorWithDeviceRed:0.0 green:0.0 blue:1.0 alpha:1.0],
-                                      @"rgb(100%,100%,0%)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:0.0 alpha:1.0],
-                                      @"rgb(100%,100%,100%)": [NSColor colorWithDeviceRed:1.0 green:1.0 blue:1.0 alpha:1.0],
-                                      @"rgb(50%,0%,0%)": [NSColor colorWithDeviceRed:0.5 green:0.0 blue:0.0 alpha:1.0],
-                                      @"rgb(0%,50%,0%)": [NSColor colorWithDeviceRed:0.0 green:0.5 blue:0.0 alpha:1.0],
-                                      @"rgb(0%,0%,50%)": [NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.5 alpha:1.0],
-                                      @"rgb(50%,50%,0%)": [NSColor colorWithDeviceRed:0.5 green:0.5 blue:0.0 alpha:1.0],
-                                      @"rgb(50%,50%,50%)": [NSColor colorWithDeviceRed:0.5 green:0.5 blue:0.5 alpha:1.0],
-                                      @"rgba(50%,0%,0%,50%)": [NSColor colorWithDeviceRed:0.5 green:0.0 blue:0.0 alpha:0.5],
-                                      @"rgba(0%,50%,0%,50%)": [NSColor colorWithDeviceRed:0.0 green:0.5 blue:0.0 alpha:0.5],
-                                      @"rgba(0%,0%,50%,50%)": [NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.5 alpha:0.5],
-                                      @"rgba(50%,50%,0%,50%)": [NSColor colorWithDeviceRed:0.5 green:0.5 blue:0.0 alpha:0.5],
-                                      @"rgba(50%,50%,50%,50%)": [NSColor colorWithDeviceRed:0.5 green:0.5 blue:0.5 alpha:0.5]
+    NSDictionary *stringsToColors = @{@"rgb(255,0,0)": [NSColor colorWithSRGBRed:1.0 green:0.0 blue:0.0 alpha:1.0],
+                                      @"rgb(0,255,0)": [NSColor colorWithSRGBRed:0.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgb(0,0,255)": [NSColor colorWithSRGBRed:0.0 green:0.0 blue:1.0 alpha:1.0],
+                                      @"rgb(255,255,0)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgb(255,255,255)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                                      @"rgba(0,255,0,0)": [NSColor colorWithSRGBRed:0.0 green:1.0 blue:0.0 alpha:0.0],
+                                      @"rgba(0,0,255,0)": [NSColor colorWithSRGBRed:0.0 green:0.0 blue:1.0 alpha:0.0],
+                                      @"rgba(255,255,0,0)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:0.0 alpha:0.0],
+                                      @"rgba(255,255,255,0)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:1.0 alpha:0.0],
+                                      @"rgba(0,255,0,255)": [NSColor colorWithSRGBRed:0.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgba(0,0,255,255)": [NSColor colorWithSRGBRed:0.0 green:0.0 blue:1.0 alpha:1.0],
+                                      @"rgba(255,255,0,255)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgba(255,255,255,255)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                                      @"rgb(100%,0%,0%)": [NSColor colorWithSRGBRed:1.0 green:0.0 blue:0.0 alpha:1.0],
+                                      @"rgb(0%,100%,0%)": [NSColor colorWithSRGBRed:0.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgb(0%,0%,100%)": [NSColor colorWithSRGBRed:0.0 green:0.0 blue:1.0 alpha:1.0],
+                                      @"rgb(100%,100%,0%)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgb(100%,100%,100%)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:1.0 alpha:1.0],
+                                      @"rgba(0%,100%,0%,0%)": [NSColor colorWithSRGBRed:0.0 green:1.0 blue:0.0 alpha:0.0],
+                                      @"rgba(0.0%,0%,100%,0%)": [NSColor colorWithSRGBRed:0.0 green:0.0 blue:1.0 alpha:0.0],
+                                      @"rgba(100.0%,100.0%,0.0%,0%)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:0.0 alpha:0.0],
+                                      @"rgba(100%,100%,100%,0%)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:1.0 alpha:0.0],
+                                      @"rgba(0%,100%,0%,100%)": [NSColor colorWithSRGBRed:0.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgba(0%,0%,100%,100%)": [NSColor colorWithSRGBRed:0.0 green:0.0 blue:1.0 alpha:1.0],
+                                      @"rgba(100%,100%,0%,100%)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:0.0 alpha:1.0],
+                                      @"rgba(100%,100%,100%,100%)": [NSColor colorWithSRGBRed:1.0 green:1.0 blue:1.0 alpha:1.0]
                                       };
     
     for (NSString *cssValue in stringsToColors) {
         NSColor *supposedColor = stringsToColors[cssValue];
-        NSColor *color = [NSColor deviceColorFromCSSValue:cssValue];
+        NSColor *color = [NSColor SRGBColorFromCSSValue:cssValue];
         
         XCTAssertEqualObjects(color, supposedColor);
     }
 }
 
+- (void)testCssHSLColor
+{
+    NSDictionary *stringsToColors = @{@"hsl(0,100%,100%)": [NSColor colorWithDeviceHue:0.0 saturation:1.0 brightness:1.0 alpha:1.0],
+                                      @"hsl(90,100%,100%)": [NSColor colorWithDeviceHue:0.25 saturation:1.0 brightness:1.0 alpha:1.0],
+                                      @"hsl(180,100%,100%)": [NSColor colorWithDeviceHue:0.5 saturation:1.0 brightness:1.0 alpha:1.0],
+                                      @"hsl(270,100.0%,100.0%)": [NSColor colorWithDeviceHue:0.75 saturation:1.0 brightness:1.0 alpha:1.0],
+                                      @"hsl(360,100%,100%)": [NSColor colorWithDeviceHue:1.0 saturation:1.0 brightness:1.0 alpha:1.0],
+                                      @"hsla(0,100%,100%,0)": [NSColor colorWithDeviceHue:0.0 saturation:1.0 brightness:1.0 alpha:0.0],
+                                      @"hsla(90,100%,100%,0.25)": [NSColor colorWithDeviceHue:0.25 saturation:1.0 brightness:1.0 alpha:0.25],
+                                      @"hsla(180,100%,100%,0.5)": [NSColor colorWithDeviceHue:0.5 saturation:1.0 brightness:1.0 alpha:0.5],
+                                      @"hsla(270,100%,100%,0.75)": [NSColor colorWithDeviceHue:0.75 saturation:1.0 brightness:1.0 alpha:0.75],
+                                      @"hsla(360,100%,100%,1.0)": [NSColor colorWithDeviceHue:1.0 saturation:1.0 brightness:1.0 alpha:1.0]
+                                      };
+    
+    for (NSString *cssValue in stringsToColors) {
+        NSColor *supposedColor = stringsToColors[cssValue];
+        supposedColor = [supposedColor colorUsingColorSpace:[NSColorSpace sRGBColorSpace]];
+        NSColor *color = [NSColor SRGBColorFromCSSValue:cssValue];
+        
+        XCTAssertEqualObjects(color, supposedColor);
+    }
+}
 
 @end

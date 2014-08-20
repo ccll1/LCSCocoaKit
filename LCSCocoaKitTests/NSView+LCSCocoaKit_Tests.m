@@ -8,27 +8,51 @@
 
 #import <XCTest/XCTest.h>
 
+#import "NSView+LCSCocoaKit.h"
+
 @interface NSView_LCSCocoaKit_Tests : XCTestCase
 
 @end
 
 @implementation NSView_LCSCocoaKit_Tests
 
-- (void)setUp
+- (void)testSubviewWithIdentifier
 {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+    NSView *viewA = [NSView new];
+    viewA.identifier = @"viewA";
+    
+    NSView *viewB = [NSView new];
+    viewB.identifier = @"viewB";
+    
+    NSView *viewC = [NSView new];
+    viewC.identifier = @"viewC";
+    
+    NSView *viewD = [NSView new];
+    viewD.identifier = @"viewD";
+    
+    NSView *viewE = [NSView new];
+    viewE.identifier = @"viewE";
+    
+    [viewA addSubview:viewB];
+    [viewA addSubview:viewC];
+    
+    [viewB addSubview:viewD];
+    [viewC addSubview:viewE];
+    
+    XCTAssertEqual([viewA subviewWithIdentifier:@"viewB"], viewB);
+    XCTAssertEqual([viewA subviewWithIdentifier:@"viewC"], viewC);
+    XCTAssertEqual([viewA subviewWithIdentifier:@"viewD"], viewD);
+    XCTAssertEqual([viewA subviewWithIdentifier:@"viewE"], viewE);
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertEqual([viewB subviewWithIdentifier:@"viewD"], viewD);
+    XCTAssertEqual([viewC subviewWithIdentifier:@"viewE"], viewE);
+    
+    XCTAssertNil([viewB subviewWithIdentifier:@"viewE"]);
+    XCTAssertNil([viewC subviewWithIdentifier:@"viewD"]);
+    
+    XCTAssertNil([viewA subviewWithIdentifier:@"non-existant view"]);
+    XCTAssertNil([viewA subviewWithIdentifier:@""]);
+    XCTAssertNil([viewA subviewWithIdentifier:nil]);
 }
 
 @end

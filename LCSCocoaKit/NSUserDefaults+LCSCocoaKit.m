@@ -1,9 +1,9 @@
 //
-//  NSUserDefaults+SuportForNSColor.m
-//  Stack
+//  NSUserDefaults+LCSCocoaKit.m
+//  Christoph Lauterbach's Standard Cocoa Kit
 //
-//  Created by Christoph Lauterbach on 09.09.13.
-//  Copyright (c) 2013 Lauterbach Beratung. All rights reserved.
+//  Created by Christoph Lauterbach on 11.08.14.
+//  Copyright (c) 2014 Christoph Lauterbach. All rights reserved.
 //
 
 #import "NSUserDefaults+LCSCocoaKit.h"
@@ -12,21 +12,23 @@
 
 - (void)setColor:(NSColor *)color forKey:(NSString *)aKey
 {
-    NSData *theData=[NSArchiver archivedDataWithRootObject:color];
+    NSData *theData = [NSArchiver archivedDataWithRootObject:color];
     [self setObject:theData forKey:aKey];
 }
 
 - (NSColor *)colorForKey:(NSString *)key
 {
-    NSColor *color;
-    
     NSData *theData = [self dataForKey:key];
     
-    if (theData != nil)
+    if (theData != nil) {
+        NSColor *color = (NSColor *)[NSUnarchiver unarchiveObjectWithData:theData];
         
-        color = (NSColor *)[NSUnarchiver unarchiveObjectWithData:theData];
+        if (color && [color isKindOfClass:[NSColor class]]) {
+            return color;
+        }
+    }
     
-    return color;
+    return nil;
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LCSCocoaKit : NSObject
-
-@end
+#import "NSColor+LCSCocoaKit.h"
+#import "NSUserDefaults+LCSCocoaKit.h"
+#import "CIColor+LCSCocoaKit.h"
+#import "NSLayoutConstraint+LCSCocoaKit.h"
+#import "NSView+LCSCocoaKit.h"
+#import "NSBezierPath+LCSCocoaKit.h"
