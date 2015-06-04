@@ -370,7 +370,7 @@ CGPoint pointOnCurve(CGPoint p0, CGPoint cp0, CGPoint cp1, CGPoint p1, CGFloat t
 
 static BOOL eq(double d1, double d2)
 {
-    if (abs(d1 - d2) < 0.000001)
+    if (fabs(d1 - d2) < 0.000001)
         return YES;
     return NO;
 }

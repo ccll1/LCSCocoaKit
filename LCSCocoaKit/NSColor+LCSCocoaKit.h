@@ -5,6 +5,7 @@
 //  Created by Christoph Lauterbach on 11.08.14.
 //  Copyright (c) 2014 Christoph Lauterbach. All rights reserved.
 //
+#import <Cocoa/Cocoa.h>
 
 @interface NSColor (LCSCocoaKit)
 
@@ -42,5 +43,7 @@
  *  Creates and returns a string with the web-standard hexadecimal representation of the receiver in the format <code>#00ff00</code>.
  */
 @property (nonatomic,readonly) NSString *hexadecimalValue;
+
+@property (nonatomic,readonly) CIColor *CIColor;
 
 @end

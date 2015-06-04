@@ -54,22 +54,22 @@
                                    constant:c];
 }
 
-- (BOOL)isEqual:(id)other
-{
-    if (other == self) {
-        return YES;
-    } else if (![self isKindOfClass:[other class]]) {
-        return NO;
-    } else {
-        NSLayoutConstraint *otherConstraint = other;
-        return (self.constant == otherConstraint.constant &&
-                self.multiplier == otherConstraint.multiplier &&
-                self.relation == otherConstraint.relation &&
-                self.firstAttribute == otherConstraint.firstAttribute &&
-                self.firstItem == otherConstraint.firstItem &&
-                self.secondAttribute == otherConstraint.secondAttribute &&
-                self.secondItem == otherConstraint.secondItem);
-    }
-}
+//- (BOOL)isEqual:(id)other
+//{
+//    if (other == self) {
+//        return YES;
+//    } else if (![self isMemberOfClass:[other class]]) {
+//        return NO;
+//    } else {
+//        NSLayoutConstraint *otherConstraint = other;
+//        return (self.constant == otherConstraint.constant &&
+//                self.multiplier == otherConstraint.multiplier &&
+//                self.relation == otherConstraint.relation &&
+//                self.firstAttribute == otherConstraint.firstAttribute &&
+//                self.firstItem == otherConstraint.firstItem &&
+//                self.secondAttribute == otherConstraint.secondAttribute &&
+//                self.secondItem == otherConstraint.secondItem);
+//    }
+//}
 
 @end

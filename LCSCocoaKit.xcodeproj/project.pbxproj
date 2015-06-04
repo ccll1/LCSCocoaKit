@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591B636319D04FA9003C6E7E /* LCSCColoredBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 591B636119D04FA9003C6E7E /* LCSCColoredBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		591B636419D04FA9003C6E7E /* LCSCColoredBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 591B636219D04FA9003C6E7E /* LCSCColoredBackgroundView.m */; };
 		592FE361199A151E00EE6E64 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592FE360199A151E00EE6E64 /* Cocoa.framework */; };
 		592FE376199A151E00EE6E64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592FE375199A151E00EE6E64 /* XCTest.framework */; };
 		592FE377199A151E00EE6E64 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592FE360199A151E00EE6E64 /* Cocoa.framework */; };
@@ -23,11 +25,22 @@
 		592FE3A0199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE39C199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.m */; };
 		592FE3A1199A16CB00EE6E64 /* NSView+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE39D199A16CB00EE6E64 /* NSView+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		592FE3A2199A16CB00EE6E64 /* NSView+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 592FE39E199A16CB00EE6E64 /* NSView+LCSCocoaKit.m */; };
+		596552821A8009180098EDDF /* NSImage+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 596552801A8009180098EDDF /* NSImage+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		596552831A8009180098EDDF /* NSImage+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 596552811A8009180098EDDF /* NSImage+LCSCocoaKit.m */; };
+		5995163E19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5995163A19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5995163F19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995163B19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.m */; };
+		5995164019AB1F4300376328 /* LCSCTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 5995163C19AB1F4300376328 /* LCSCTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5995164119AB1F4300376328 /* LCSCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5995163D19AB1F4300376328 /* LCSCTextField.m */; };
+		599703111AF791CA004DBF8B /* LCSCDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 5997030F1AF791CA004DBF8B /* LCSCDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		599703121AF791CA004DBF8B /* LCSCDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 599703101AF791CA004DBF8B /* LCSCDeviceInfo.m */; };
+		599703141AF79426004DBF8B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 599703131AF79426004DBF8B /* libz.dylib */; };
 		59A6660B19A37989007DC1DA /* LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 592FE36D199A151E00EE6E64 /* LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		59C4F4A5199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4A4199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m */; };
 		59C4F4A8199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4A7199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m */; };
 		59C4F4AA199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4A9199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m */; };
 		59C4F4AC199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C4F4AB199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m */; };
+		59DE1DE019ED145400C40D33 /* LCSCGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 59DE1DDE19ED145400C40D33 /* LCSCGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59DE1DE119ED145400C40D33 /* LCSCGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1DDF19ED145400C40D33 /* LCSCGradient.m */; };
 		59F2B8A6199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F2B8A4199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m */; };
 		59F2B8A7199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F2B8A5199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -43,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		591B636119D04FA9003C6E7E /* LCSCColoredBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSCColoredBackgroundView.h; sourceTree = "<group>"; };
+		591B636219D04FA9003C6E7E /* LCSCColoredBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSCColoredBackgroundView.m; sourceTree = "<group>"; };
 		592FE35D199A151E00EE6E64 /* LCSCocoaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LCSCocoaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		592FE360199A151E00EE6E64 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		592FE363199A151E00EE6E64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,10 +79,21 @@
 		592FE39C199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LCSCocoaKit.m"; sourceTree = "<group>"; };
 		592FE39D199A16CB00EE6E64 /* NSView+LCSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+LCSCocoaKit.h"; sourceTree = "<group>"; };
 		592FE39E199A16CB00EE6E64 /* NSView+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+LCSCocoaKit.m"; sourceTree = "<group>"; };
+		596552801A8009180098EDDF /* NSImage+LCSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+LCSCocoaKit.h"; sourceTree = "<group>"; };
+		596552811A8009180098EDDF /* NSImage+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+LCSCocoaKit.m"; sourceTree = "<group>"; };
+		5995163A19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableColumn+LCSCocoaKit.h"; sourceTree = "<group>"; };
+		5995163B19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableColumn+LCSCocoaKit.m"; sourceTree = "<group>"; };
+		5995163C19AB1F4300376328 /* LCSCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSCTextField.h; sourceTree = "<group>"; };
+		5995163D19AB1F4300376328 /* LCSCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSCTextField.m; sourceTree = "<group>"; };
+		5997030F1AF791CA004DBF8B /* LCSCDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSCDeviceInfo.h; sourceTree = "<group>"; };
+		599703101AF791CA004DBF8B /* LCSCDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSCDeviceInfo.m; sourceTree = "<group>"; };
+		599703131AF79426004DBF8B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		59C4F4A4199F4F2B005C5F5F /* NSBezierPath+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
 		59C4F4A7199F5758005C5F5F /* NSView+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
 		59C4F4A9199F588D005C5F5F /* NSLayoutConstraint+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
 		59C4F4AB199F5B7A005C5F5F /* NSUserDefaults+LCSCocoaKit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+LCSCocoaKit_Tests.m"; sourceTree = "<group>"; };
+		59DE1DDE19ED145400C40D33 /* LCSCGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSCGradient.h; sourceTree = "<group>"; };
+		59DE1DDF19ED145400C40D33 /* LCSCGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSCGradient.m; sourceTree = "<group>"; };
 		59F2B8A4199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LCSCocoaKit.m"; sourceTree = "<group>"; };
 		59F2B8A5199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+LCSCocoaKit.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				599703141AF79426004DBF8B /* libz.dylib in Frameworks */,
 				592FE361199A151E00EE6E64 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +143,7 @@
 		592FE35F199A151E00EE6E64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				599703131AF79426004DBF8B /* libz.dylib */,
 				592FE360199A151E00EE6E64 /* Cocoa.framework */,
 				592FE375199A151E00EE6E64 /* XCTest.framework */,
 				592FE362199A151E00EE6E64 /* Other Frameworks */,
@@ -149,6 +177,18 @@
 				592FE39E199A16CB00EE6E64 /* NSView+LCSCocoaKit.m */,
 				59F2B8A5199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h */,
 				59F2B8A4199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m */,
+				5995163A19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.h */,
+				5995163B19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.m */,
+				596552801A8009180098EDDF /* NSImage+LCSCocoaKit.h */,
+				596552811A8009180098EDDF /* NSImage+LCSCocoaKit.m */,
+				5995163C19AB1F4300376328 /* LCSCTextField.h */,
+				5995163D19AB1F4300376328 /* LCSCTextField.m */,
+				591B636119D04FA9003C6E7E /* LCSCColoredBackgroundView.h */,
+				591B636219D04FA9003C6E7E /* LCSCColoredBackgroundView.m */,
+				59DE1DDE19ED145400C40D33 /* LCSCGradient.h */,
+				59DE1DDF19ED145400C40D33 /* LCSCGradient.m */,
+				5997030F1AF791CA004DBF8B /* LCSCDeviceInfo.h */,
+				599703101AF791CA004DBF8B /* LCSCDeviceInfo.m */,
 			);
 			path = LCSCocoaKit;
 			sourceTree = "<group>";
@@ -187,7 +227,13 @@
 				59F2B8A7199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.h in Headers */,
 				592FE399199A167100EE6E64 /* CIColor+LCSCocoaKit.h in Headers */,
 				592FE39F199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.h in Headers */,
+				5995163E19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.h in Headers */,
+				5995164019AB1F4300376328 /* LCSCTextField.h in Headers */,
 				592FE3A1199A16CB00EE6E64 /* NSView+LCSCocoaKit.h in Headers */,
+				596552821A8009180098EDDF /* NSImage+LCSCocoaKit.h in Headers */,
+				591B636319D04FA9003C6E7E /* LCSCColoredBackgroundView.h in Headers */,
+				59DE1DE019ED145400C40D33 /* LCSCGradient.h in Headers */,
+				599703111AF791CA004DBF8B /* LCSCDeviceInfo.h in Headers */,
 				592FE393199A166100EE6E64 /* NSColor+LCSCocoaKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,12 +332,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5995164119AB1F4300376328 /* LCSCTextField.m in Sources */,
 				592FE3A0199A16CB00EE6E64 /* NSLayoutConstraint+LCSCocoaKit.m in Sources */,
+				596552831A8009180098EDDF /* NSImage+LCSCocoaKit.m in Sources */,
 				592FE39A199A167100EE6E64 /* CIColor+LCSCocoaKit.m in Sources */,
 				592FE396199A166100EE6E64 /* NSUserDefaults+LCSCocoaKit.m in Sources */,
 				59F2B8A6199A172C00B61C13 /* NSBezierPath+LCSCocoaKit.m in Sources */,
+				591B636419D04FA9003C6E7E /* LCSCColoredBackgroundView.m in Sources */,
 				592FE394199A166100EE6E64 /* NSColor+LCSCocoaKit.m in Sources */,
+				599703121AF791CA004DBF8B /* LCSCDeviceInfo.m in Sources */,
 				592FE3A2199A16CB00EE6E64 /* NSView+LCSCocoaKit.m in Sources */,
+				5995163F19AB1F4300376328 /* NSTableColumn+LCSCocoaKit.m in Sources */,
+				59DE1DE119ED145400C40D33 /* LCSCGradient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +461,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LCSCocoaKit/LCSCocoaKit-Prefix.pch";
 				INFOPLIST_FILE = "LCSCocoaKit/LCSCocoaKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -424,6 +477,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LCSCocoaKit/LCSCocoaKit-Prefix.pch";
 				INFOPLIST_FILE = "LCSCocoaKit/LCSCocoaKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};

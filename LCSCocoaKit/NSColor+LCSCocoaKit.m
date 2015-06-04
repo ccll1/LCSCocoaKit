@@ -327,4 +327,9 @@
     return YES;
 }
 
+- (CIColor*)CIColor
+{
+    return [[CIColor alloc] initWithColor:self];
+}
+
 @end

@@ -28,4 +28,41 @@
     return nil;
 }
 
+- (BOOL)isSubviewOfFirstResponder
+{
+    if (self.window && self.superview && self != self.window.contentView &&
+        (self.window.firstResponder == self ||
+         self.superview.isSubviewOfFirstResponder)) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
+
+- (NSImage *)imageRepresentation
+{
+    BOOL wasHidden      = self.isHidden;
+    BOOL wantedLayer = self.wantsLayer;
+
+    self.hidden         = NO;
+    self.wantsLayer     = YES;
+
+    CGFloat originalRasterizationScale = self.layer.rasterizationScale;
+    self.layer.rasterizationScale = 2.0;
+    
+    NSImage *image = [[NSImage alloc] initWithSize:self.bounds.size];
+    [image lockFocus];
+    CGContextRef ctx = [NSGraphicsContext currentContext].graphicsPort;
+    [self.layer renderInContext:ctx];
+    [image unlockFocus];
+    
+    self.layer.rasterizationScale = originalRasterizationScale;
+    self.wantsLayer = wantedLayer;
+    self.hidden = wasHidden;
+    
+    return image;
+}
+
+
 @end

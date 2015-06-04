@@ -19,5 +19,8 @@
  */
 - (NSView*)subviewWithIdentifier:(NSString*)identifier;
 
+@property (readonly, nonatomic) BOOL isSubviewOfFirstResponder;
+@property (readonly, nonatomic) NSImage *imageRepresentation;
+
 @end
 
