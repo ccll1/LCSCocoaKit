@@ -45,7 +45,7 @@
                                               hints:nil];
     NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
     newRep.size = self.size;
-    NSData *pngData = [newRep representationUsingType:NSPNGFileType properties:nil];
+    NSData *pngData = [newRep representationUsingType:NSPNGFileType properties:@{}];
 
     return [pngData writeToURL:url options:NSDataWritingAtomic error:error];
 }
